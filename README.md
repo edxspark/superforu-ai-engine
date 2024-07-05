@@ -1,51 +1,55 @@
 
-# SuperforuAIEngine
+# superforu-ai-engine
 ***
-SuperforuAIEngine is a data engine for your LLM application. 
-Building with SuperforuAIEngine typically involves working with LLM、Memory、knowledge and tools. 
+## 生产级AI数据引擎  
+通过AI数据引擎，快速构建高性能可持续的AI应用，如：RGA应用、客服机器人、写作助手、阅读助手、合同助手、论文助手等。  
+系统提供全面的API服务，外部应用可快速集成AI能力，如: 知识库、OCR、Embedding、Chat服务。
+
+在线应用案例: http://www.superforu.com
 
 ![architecture](./docs/images/superforu-architecture.png)
 
-## Why use SuperforuAIEngine?
-***
-Langchain/LlamaIndex provide easy to use abstractions that can be used for quick experimentation and prototyping. 
-But, when things move to production, there are constraints like the External knowledge base integration, 
-complex text parsing, precise knowledge extraction, tool custom routing encapsulation, response custom encapsulation etc. 
+## 功能一览
+- 知识管理：通过可视化管理知识并记录知识处理状态
+- Agent: 自定义Agent
+- LLM对话: 直接与LLM对话
+- 与知识库对话：RAG检索增强生成对话
 
-## Introduction
-SuperforuAIEngine is an open-source data engine to organize your RAG codebase along with a frontend to play around with different RAG customizations. 
-It provides a simple way to organize your codebase so that it becomes easy to test it locally while also being able to deploy it in a production ready environment. 
+## 接口一览
+- 文档向量化：通过接收文档，解析分段后进行向量化，保存到索引库和向量库中
+- 删除文档：移除已处理的文档
+- 获取相关文档内容: 获取与问题相关的文档内容
+- 聊天: 通过发送问题，响应生成内容，支持一次性返回和流式返回
 
-## 🧑‍💻Technical selection
-### 1. Data processing:
-- Local services: OmniParse a platform that ingests and parses any unstructured data into structured, actionable data optimized for GenAI (LLM) applications. Whether you are working with documents, tables, images, videos, audio files, or web pages, OmniParse prepares your data to be clean, structured, and ready for AI applications such as RAG, fine-tuning, and more.
-- Cloud services: Moonshot OCR services、Google OCR、Baidu OCR、Moonshot etc.
 
-### 2. Data storage and management: 
-- Elasticsearch: Version 8.X+ A low latency architecture optimized for AI, with native vector database functionality. Supports full-text retrieval and reciprocal Rank Fusion (RRF).
-- Nocodb: NocoDB is a no-code database platform that allows teams to collaborate and build applications with ease of a familiar and intuitive spreadsheet interface. This allows even non-developers.
+## 技术选型
+- OCR
+  - 本地化: OmniParse (需要至少T4显卡)
+  - 云服务: Moonshot OCR或其他
+- Embedding: 
+  - 本地化: Ollama (nomic-embed-text)
+  - 云服务: ChatGLM (embedding)
+- LLM: 
+  - 本地化: Ollama (qwen2:7b)
+  - 云服务: Deepseek
+- 索引库向量库:
+  - elasticsearch 8.X
+- 元数据管理：
+  - nocodb: 知识库管理、元数据管理
+- 基础框架: langchain
+  - python
+  - llamaindex
+  - langchain
+  - fastapi
+  -
 
-### 3. Data embedding
-- Ollama: nomic-embed-text
+# 🚀 本地开发指南
+## 环境准备: docker、docker compose、conda、ollama
+- 安装 docker:
+- 安装 docker compose:
+- 安装 conda:
+- 安装 Ollama（并安装embedding模型: ollama pull nomic-embed-text）
 
-### Development framework
-- Python
-- LlamaIndex
-- Langchain
-- Flask
-
-## API Services
-- Data processing
-- Data retrieval
-- Chat (stream or no)
-
-# 🚀 Quickstart: Running Cognita Locally
-## Dependent: docker、docker compose、conda、ollama
-- Install docker:
-- Install docker compose:
-- Install conda:
-- Install Ollama
-- 
 ```shell
 conda create --name superforu-ai-engine python=3.11
 conda activate superforu-ai-engine
