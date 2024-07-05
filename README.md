@@ -7,6 +7,9 @@
 
 在线应用案例: http://www.superforu.com
 
+## 系统架构
+新架构解决RAG无法精准提取内容、上下文过大、问题模糊、长期记忆等问题
+
 ![architecture](./docs/images/superforu-architecture.png)
 
 ## 功能一览
@@ -20,7 +23,6 @@
 - 删除文档：移除已处理的文档
 - 获取相关文档内容: 获取与问题相关的文档内容
 - 聊天: 通过发送问题，响应生成内容，支持一次性返回和流式返回
-
 
 ## 技术选型
 - OCR
@@ -41,7 +43,8 @@
   - llamaindex
   - langchain
   - fastapi
-  -
+- 前端应用:
+  - chatgpt-next-web-ui
 
 # 🚀 本地开发指南
 ## 环境准备: docker、docker compose、conda、ollama
