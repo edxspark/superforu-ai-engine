@@ -1,5 +1,5 @@
 
-## SuperforuAIEngine
+# SuperforuAIEngine
 ***
 SuperforuAIEngine is a data engine for your LLM application. 
 Building with SuperforuAIEngine typically involves working with LLM、Memory、knowledge and tools. 
@@ -38,4 +38,19 @@ It provides a simple way to organize your codebase so that it becomes easy to te
 - Data processing
 - Data retrieval
 - Chat (stream or no)
+
+# 🚀 Quickstart: Running Cognita Locally
+## Dependent: docker、docker compose、conda、ollama
+- Install docker:
+- Install docker compose:
+- Install conda:
+- Install Ollama
+- 
+```shell
+conda create --name superforu-ai-engine python=3.11
+conda activate superforu-ai-engine
+pip install -r requirements.txt
+python backend/src/App.py
+```
+
 
