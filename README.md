@@ -52,15 +52,23 @@ Langchain/LlamaIndex提供了易于使用的抽象，但在实际生产中存在
 
 # 🚀 本地开发指南
 ## 环境准备: docker、docker compose、conda、ollama
-- 安装 docker:
-- 安装 docker compose:
-- 安装 conda:
-- 安装 Ollama（并安装embedding模型: ollama pull nomic-embed-text）
+- 安装 [docker](https://www.docker.com/)
+- 安装 [docker compose](https://docs.docker.com/compose/)
+- 安装 [miniconda](https://docs.anaconda.com/miniconda)
+- 安装 [Ollama](https://ollama.com/)
 
 ```shell
+# 创建python环境
 conda create --name superforu-ai-engine python=3.11
 conda activate superforu-ai-engine
+
+# 安装依赖
 pip install -r requirements.txt
+
+# 本地安装embedding模型
+ollama pull nomic-embed-text
+
+# 启动程序
 python backend/src/App.py
 ```
 
