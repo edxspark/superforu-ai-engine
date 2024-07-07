@@ -1,22 +1,22 @@
 
 # superforu-ai-engine
 ***
-## 生产级AI数据引擎  
-通过AI数据引擎，快速构建高性能可持续的AI应用，如：RGA应用、客服机器人、写作助手、阅读助手、合同助手、论文助手等。 
-系统提供全面的API服务，外部应用可快速集成AI能力，如: 知识库、OCR、Embedding、Chat服务。
+## AI数据引擎
+快速构建高性能可持续的AI应用，如：RAG、智能体、客服机器人、写作助手、阅读助手、合同助手、论文助手等。 
+提供的API服务，外部应用可快速集成AI能力，如: 知识库管理、OCR、Embedding、Chat服务。
 
 在线应用案例: http://www.superforu.com
 
 ⚠️ 系统代码正在持续迭代上传中  
 
 ## 系统架构
-新架构解决RAG无法精准提取内容、上下文过大、问题模糊、长期记忆等问题
+新架构增强：精准提取内容、上下文过大处理、问题模糊、长期记忆等问题
 
 ![architecture](./docs/images/superforu-architecture.png)
 
 ## 功能一览
 - 知识管理：通过可视化管理知识并记录知识处理状态
-- Agent: 自定义Agent
+- 智能体: 自定义Agent
 - LLM对话: 直接与LLM对话
 - 与知识库对话：RAG检索增强生成对话
 
