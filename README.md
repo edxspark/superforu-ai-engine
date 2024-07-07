@@ -5,14 +5,17 @@
 快速构建高性能可持续的AI应用，如：RAG、智能体、客服机器人、写作助手、阅读助手、合同助手、论文助手等。 
 提供的API服务，外部应用可快速集成AI能力，如: 知识库管理、OCR、Embedding、Chat服务。
 
+Langchain/LlamaIndex提供了易于使用的抽象，但在实际生产中存在了限制，不利于针对业务的微调和扩展。
+
+## 系统架构
+> 架构增强：精准提取内容、上下文过大处理、问题模糊、长期记忆等问题  
+> 价值参考：llamaindex、phidata、cognita
+
+![architecture](./docs/images/superforu-architecture.png)
+
 在线应用案例: http://www.superforu.com
 
 ⚠️ 系统代码正在持续迭代上传中  
-
-## 系统架构
-新架构增强：精准提取内容、上下文过大处理、问题模糊、长期记忆等问题
-
-![architecture](./docs/images/superforu-architecture.png)
 
 ## 功能一览
 - 知识管理：通过可视化管理知识并记录知识处理状态
@@ -40,10 +43,10 @@
   - elasticsearch 8.X
 - 元数据管理：
   - nocodb: 知识库管理、元数据管理
-- 基础框架: langchain
+- 基础框架: 
   - python
-  - langchain
   - fastapi
+  - langchain
 - 前端应用:
   - chatgpt-next-web-ui
 
