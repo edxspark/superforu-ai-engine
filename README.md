@@ -42,7 +42,6 @@
   - nocodb: 知识库管理、元数据管理
 - 基础框架: langchain
   - python
-  - llamaindex
   - langchain
   - fastapi
 - 前端应用:

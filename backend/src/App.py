@@ -18,22 +18,25 @@ app.add_middleware(
 )
 
 
+# Chat
 @app.post('/v1/chat/completions')
 async def completions():
     return {'status': 'completions'}
 
 
-@app.post("/ai/embedding/get_related_content")
+# Embedding file
+@app.post("/v1/embeddings")
+def embeddings():
+    return {'status': 'document_to_vector_db'}
+
+
+#
+@app.post("/file/content/related")
 def get_related_content():
     return {'status': 'get_related_content'}
-
-
-@app.post("/ai/embedding/document_to_vector_db")
-def document_to_vector_db():
-    return {'status': 'document_to_vector_db'}
 
 
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run(app, host="0.0.0.0", port=10101)
+    uvicorn.run(app, host="0.0.0.0", port=11888)
