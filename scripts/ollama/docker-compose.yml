@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  ollama:
+    restart: always
+    container_name: ollama
+    image: ollama/ollama
+    ports:
+      - "21435:21435"
+    environment:
+      - OLLAMA_HOST=0.0.0.0:21435
+      - OLLAMA_MODELS=/data/models
+    volumes:
+      - /usr/models/:/data/models
+    command: serve

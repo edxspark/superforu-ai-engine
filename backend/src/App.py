@@ -41,4 +41,4 @@ def get_related_content(relatedContentBo: RelatedContentBo):
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run(app, host="0.0.0.0", port=11888)
+    uvicorn.run(app, host="0.0.0.0", port=21888)
